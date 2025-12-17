@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zddls_psr_herc_cnsm_cds/$metadata">
+        <edmx:Include Namespace="ZDDLS_PSR_HERC_CNSM_CDS" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="zddls_psr_herc_cnsm_cds_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/TotaledProperties">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/PlannedOutlets"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/CompletedOutlets"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/NotCompleted"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/ProductiveOutlets"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDProductiveOutlets"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/UnproductiveOutlets"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/UnplannedOutlets"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/PriorDayOrders"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/NoDeliverYesterday"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/Qty1"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/Qty2"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/Qty3"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/Qty4To5"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/Qty6To10"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/Qty11To20"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/QtyGT20"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDCompletedOutlets"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDCompletedCallsWithin50m"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDCompletedCallsWithin50m"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDStrikeRateWithin50m"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDStrikeRateWithin50m"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDOrderQty"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDOrderQty"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDOrderSkus"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDOrderSkus"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDSaleOrders"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDSaleOrders"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDSalePhysical"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDSalePhysical"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDSalein250ml"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDSalein250ml"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDSaleSkuCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDSaleSkuCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDBills"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDBills"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDTargetin250ml"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/DaysPassed"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/TotalDaysInMonth"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDload"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDLoad"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDNoTime"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDNoTime"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDAreaInacc"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDAreaInacc"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDOutletClose"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDOutletClose"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDOverStock"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDOverStock"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDNoOwner"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDNoOwner"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDNoFund"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDNoFund"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDPriceDisparity"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDPriceDisparity"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDBuyWS"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDBuyWS"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDBuyBrand"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDBuyBrand"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDStockUnavail"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDStockUnavail"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDAreaInAcc_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDAreaInAcc_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDOutletClosed_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDOutletClosed_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDNoMoney_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDNoMoney_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDNoOrder_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDNoOrder_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDNoEmpty_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDNoEmpty_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDNoTime_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDNoTime_ND"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/CSDOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/SSRBOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/SliceOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/StingOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/AqfOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/GatOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/ZSOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/PepsiOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/DewOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/SevupOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MirOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/SSCSDOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MSCSDOutletsCount"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/CSDVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/SSRBVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/SliceVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/StingVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/AqfVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/GatVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/ZSVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/PepsiVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/DewVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/SevupVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MirVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/SSCSDVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MSCSDVol"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDCashSale"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDCreditSale"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDCashSale"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDCreditSale"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDTotalSaleRS"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDTotalSaleRS"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/FTDOrderSkusUnq"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTDOrderSkusUnq"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/MTD_PlannedCalls"/>
+            <Annotations Target="ZDDLS_PSR_HERC_CNSM_CDS.ZDDLS_PSR_HERC_CNSMType/priordayordersqty"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

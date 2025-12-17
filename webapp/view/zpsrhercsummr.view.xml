@@ -1,0 +1,85 @@
+<mvc:View controllerName="zpsrhercsummr.controller.zpsrhercsummr"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true">
+    
+    <Page id="page" title="PSR Hierarchy Summary Report">
+        <content>
+            <!-- Search Panel -->
+            <Panel headerText="Search Filters" class="sapUiResponsiveMargin">
+                <f:SimpleForm id="searchForm"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false">
+                    <f:content>
+                        <Label text="RSM" />
+                        <Input id="rsmInput" 
+                            value="{filterModel>/RSM}"
+                            placeholder="Enter RSM Name" />
+                        
+                        <Label text="TDM" />
+                        <Input id="tdmInput" 
+                            value="{filterModel>/TDM}"
+                            placeholder="Enter TDM Name" />
+                        
+                        <Label text="ADR" />
+                        <Input id="adrInput" 
+                            value="{filterModel>/ADR}"
+                            placeholder="Enter ADR Name" />
+                        
+                        <Label text="" />
+                        <Toolbar>
+                            <Button text="Search" 
+                                type="Emphasized"
+                                press=".onSearch"
+                                icon="sap-icon://search" />
+                            <ToolbarSpacer />
+                            <Button text="Export to PDF" 
+                                type="Success"
+                                press=".onExportToPDF"
+                                icon="sap-icon://pdf-attachment" />
+                        </Toolbar>
+                    </f:content>
+                </f:SimpleForm>
+            </Panel>
+
+            <!-- Results Section -->
+            <Panel headerText="Results" class="sapUiResponsiveMargin">
+                <content>
+                    <VBox items="{dataModel>/PSRData}">
+                        <Panel headerText="{dataModel>ADR}" 
+                            class="sapUiSmallMarginBottom"
+                            expandable="true"
+                            expanded="true">
+                            <content>
+                                <VBox class="sapUiSmallMargin">
+                                    <Text text="RSM: {dataModel>RSM}" class="sapUiTinyMarginBottom"/>
+                                    <Text text="TDM: {dataModel>TDM}" class="sapUiTinyMarginBottom"/>
+                                    
+            
+                                    <Text text="PSR Data loaded - Export to PDF to view formatted report" 
+                                        class="sapUiSmallMarginTop"/>
+                                </VBox>
+                            </content>
+                        </Panel>
+                    </VBox>
+                </content>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>
+

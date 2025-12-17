@@ -1,0 +1,24 @@
+{
+  "generationParameters": {
+    "generationDate": "Mon Dec 15 2025 12:44:04 GMT+0500 (Pakistan Standard Time)",
+    "generatorPlatform": "Visual Studio Code",
+    "serviceType": "OData Url",
+    "metadataFilename": "",
+    "serviceUrl": "https://prds4h.pakbev.com:44300/sap/opu/odata/sap/ZDDLS_PSR_HERC_CNSM_CDS/",
+    "appName": "zpsrhercsummr",
+    "appTitle": "PSR Hierarchy Summary",
+    "appDescription": "PSR Hierarchy Summary",
+    "appNamespace": "",
+    "ui5Theme": "sap_fiori_3",
+    "ui5Version": "1.90.7",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.18.1",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "In order to launch the generated app, simply run the following from the generated app root folder:\n\n```\n    npm start\n```"
+  }
+}
