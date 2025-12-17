@@ -308,9 +308,9 @@ sap.ui.define([
                         psr.PSR_ID,
                         psr.CompletedOutlets ?? 0,
                         psr.FTDCompletedCallsWithin50m_F ?? 0,
-                        psr.FTDCallCompletionPct_F ?? "0%",
-                        psr.FTDTotalOrders_F ?? 0,
-                        psr.FTDProductiveOrders_F ?? 0,
+                        psr.FTDCallCompletionPct_F ?? "0%",        //ghalt h 
+                        psr.ProductiveOutlets ?? 0,
+                        psr.FTDStrikeRateWithin50m ?? 0,
                         psr.FTDStrikeRatePct_F ?? "0%"
                     ]);
                 });
@@ -320,11 +320,11 @@ sap.ui.define([
                     ccsrBody.push([
                         index === 0 ? "MTD" : "",          
                         psr.PSR_ID,
-                        psr.MTDTotalCalls_F ?? 0,
-                        psr.MTDCompletedCallsWithin50m_F ?? 0,
+                        psr.MTDCompletedOutlets ?? 0,
+                        psr.MTDCompletedCallsWithin50m ?? 0,
                         psr.MTDCallCompletionPct_F ?? "0%",
-                        psr.MTDTotalOrders_F ?? 0,
-                        psr.MTDProductiveOrders_F ?? 0,
+                        psr.MTDProductiveOutlets?? 0,
+                        psr.MTDStrikeRateWithin50m ?? 0,
                         psr.MTDStrikeRatePct_F ?? "0%"
                     ]);
                 });
