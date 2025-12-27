@@ -3,6 +3,7 @@
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
     displayBlock="true">
     
     <Page id="page" title="PSR Hierarchy Summary Report">
@@ -26,33 +27,58 @@
                     columnsM="1"
                     singleContainerFullSize="false">
                     <f:content>
-                        <Label text="RSM" />
-                        <Input id="rsmInput" 
-                            value="{filterModel>/RSM}"
-                            placeholder="Enter RSM Name" />
-                        
-                        <Label text="TDM" />
-                        <Input id="tdmInput" 
-                            value="{filterModel>/TDM}"
-                            placeholder="Enter TDM Name" />
-                        
-                        <Label text="ADR" />
-                        <Input id="adrInput" 
-                            value="{filterModel>/ADR}"
-                            placeholder="Enter ADR Name" />
-                        
+                    <!-- Sale Org -->
+                    <Label text="Sale Org" />
+                    <ComboBox 
+                        selectedKey="{filterModel>/SALESORG}"
+                        filterSecondaryValues="true"
+                        items="{dataModel>/allSalesOrgs}">
+                        <core:Item key="{dataModel>SALESORG}" text="{dataModel>SALESORG}" />
+                    </ComboBox>
+
+                    <!-- RSM -->
+                    <Label text="RSM" />
+                    <ComboBox 
+                        selectedKey="{filterModel>/RSM}"
+                        filterSecondaryValues="true"
+                        items="{dataModel>/allRSMs}">
+                        <core:Item key="{dataModel>RSM}" text="{dataModel>RSM}" />
+                    </ComboBox>
+
+                    <!-- TDM -->
+                    <Label text="TDM" />
+                    <ComboBox 
+                        selectedKey="{filterModel>/TDM}"
+                        filterSecondaryValues="true"
+                        items="{dataModel>/allTDMs}">
+                        <core:Item key="{dataModel>TDM}" text="{dataModel>TDM}" />
+                    </ComboBox>
+
+                    <!-- ADR -->
+                    <Label text="ADR" />
+                    <ComboBox 
+                        selectedKey="{filterModel>/ADR}"
+                        filterSecondaryValues="true"
+                        items="{dataModel>/allADRs}">
+                        <core:Item key="{dataModel>ADR}" text="{dataModel>ADR}" />
+                    </ComboBox>
+
+                      <!-- buttons     -->
                         <Label text="" />
-                        <Toolbar>
+                        <Toolbar width="93%" class="sapUiSmallMarginBegin sapUiSmallMarginEnd">
                             <Button text="Search" 
                                 type="Emphasized"
                                 press=".onSearch"
                                 icon="sap-icon://search" />
+
                             <ToolbarSpacer />
+
                             <Button text="Export to PDF" 
                                 type="Success"
                                 press=".onExportToPDF"
                                 icon="sap-icon://pdf-attachment" />
                         </Toolbar>
+                
                     </f:content>
                 </f:SimpleForm>
             </Panel>
@@ -67,11 +93,9 @@
                             expanded="true">
                             <content>
                                 <VBox class="sapUiSmallMargin">
-                                    <Text text="RSM: {dataModel>RSM}" class="sapUiTinyMarginBottom"/>
-                                    <Text text="TDM: {dataModel>TDM}" class="sapUiTinyMarginBottom"/>
-                                    
-            
-                                    <Text text="PSR Data loaded - Export to PDF to view formatted report" 
+                                    <!-- <Text text="RSM: {dataModel>RSM}" class="sapUiTinyMarginBottom"/>
+                                    <Text text="TDM: {dataModel>TDM}" class="sapUiTinyMarginBottom"/> -->
+                                    <Text text="Data loaded - Export to PDF to view formatted report" 
                                         class="sapUiSmallMarginTop"/>
                                 </VBox>
                             </content>
@@ -82,4 +106,5 @@
         </content>
     </Page>
 </mvc:View>
+
 
